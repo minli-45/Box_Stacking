@@ -7,7 +7,7 @@ public class spawner : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown("space")) {
-            Debug.Log("pressed space");
+            Instantiate(BasicBox, transform.position, Quaternion.identity);
         }
     }
 }
