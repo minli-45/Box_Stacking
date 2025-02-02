@@ -6,6 +6,8 @@ public class movement : MonoBehaviour
     bool moveRight;
     bool moveUp;
     bool moveDown;
+    bool rotateRight;
+    bool rotateLeft;
 
     
 
@@ -22,6 +24,8 @@ public class movement : MonoBehaviour
         moveRight = Input.GetKeyDown("d");
         moveUp = Input.GetKeyDown("w");
         moveDown = Input.GetKeyDown("s");
+        rotateRight = Input.GetKeyDown("e");
+        rotateLeft = Input.GetKeyDown("q");
         moveBox();
     }
 
@@ -37,6 +41,12 @@ public class movement : MonoBehaviour
         }
         if (moveDown) {
             GetComponent<Transform>().position += new Vector3(0,0,-GetComponent<Transform>().lossyScale.z);
+        }
+        if (rotateLeft) {
+            GetComponent<Transform>().Rotate(0,-90,0);
+        }
+        if (rotateRight) {
+            GetComponent<Transform>().Rotate(0,90,0);
         }
     }
 }
