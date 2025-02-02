@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class movement : MonoBehaviour
 {
-    float horizontalMovement;
-    float horizontalDistance;
-    float verticalMovement;
-    float verticalDistance;
+    bool moveLeft;
+    bool moveRight;
+    bool moveUp;
+    bool moveDown;
+
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,17 +18,25 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalMovement = Input.GetAxisRaw("Horizontal");
-        verticalMovement = Input.GetAxisRaw("Vertical");
-    }
-
-    void FixedUpdates() {
+        moveLeft = Input.GetKeyDown("a");
+        moveRight = Input.GetKeyDown("d");
+        moveUp = Input.GetKeyDown("w");
+        moveDown = Input.GetKeyDown("s");
         moveBox();
     }
 
     void moveBox() {
-        if (horizontalMovement != 0) {
-
+        if (moveLeft) {
+            GetComponent<Transform>().position += new Vector3(-GetComponent<Transform>().lossyScale.x,0,0);
+        }
+        if (moveRight) {
+            GetComponent<Transform>().position += new Vector3(GetComponent<Transform>().lossyScale.x,0,0);
+        }
+        if (moveUp) {
+            GetComponent<Transform>().position += new Vector3(0,0,GetComponent<Transform>().lossyScale.z);
+        }
+        if (moveDown) {
+            GetComponent<Transform>().position += new Vector3(0,0,-GetComponent<Transform>().lossyScale.z);
         }
     }
 }

@@ -22,6 +22,7 @@ public class spawner : MonoBehaviour
             centerOffset = new Vector3((PalletSideLength-scaleChange.x)/2, 0, (PalletSideLength-scaleChange.z)/2);
             box = Instantiate(BasicBox, transform.position + centerOffset, Quaternion.identity);
             box.transform.localScale += scaleChange;
+            box.GetComponent<movement>().enabled = true;
         }
     }
 }
