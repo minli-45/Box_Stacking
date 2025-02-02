@@ -6,8 +6,6 @@ TagManager:
   tags:
   - Box
   - Border
-  - Ground
-  - Ceiling
   layers:
   - Default
   - TransparentFX
