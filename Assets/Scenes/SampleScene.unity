@@ -486,7 +486,7 @@ Transform:
   m_GameObject: {fileID: 688912429}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -505,6 +505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BasicBox: {fileID: 4409739761439339343, guid: 7981ad99441d10241bff9b1909ad9502, type: 3}
+  BoxFalling: 0
 --- !u!1 &867422017
 GameObject:
   m_ObjectHideFlags: 0

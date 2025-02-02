@@ -12,7 +12,7 @@ public class movement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        GetComponent<Rigidbody>().AddForce(0f, -0.5f, 0f, ForceMode.VelocityChange);
+        GetComponent<Rigidbody>().AddForce(0f, -0.2f, 0f, ForceMode.VelocityChange);
     }
 
     // Update is called once per frame
