@@ -20,6 +20,15 @@ public class collisions : MonoBehaviour
         }
     }
 
+    void OnCollisionStay(Collision other) {
+        if (GetComponent<Transform>().rotation.eulerAngles.z > 5f || GetComponent<Transform>().rotation.eulerAngles.z < -5f) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        else if (GetComponent<Transform>().rotation.eulerAngles.x > 5f || GetComponent<Transform>().rotation.eulerAngles.x < -5f) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "Border") {
             reset = true;
